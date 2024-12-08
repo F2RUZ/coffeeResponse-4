@@ -1,0 +1,59 @@
+.navbar {
+  @include Display();
+
+  &__logo {
+    width: 220px;
+  }
+
+  &__list {
+    @include Display();
+
+    gap: 50px;
+  }
+
+  &__link {
+    font-family: "Barlow";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height, or 125% */
+    letter-spacing: 0.923077px;
+    text-transform: uppercase;
+
+    color: #83888f;
+
+    &:hover {
+      /* ABOUT US */
+
+      transition: all 0.3s linear;
+
+      color: #333d4b;
+    }
+  }
+
+  &__burger {
+    @include Display();
+    flex-direction: column;
+    gap: 5px;
+    display: none;
+  }
+  &__hr {
+    width: 25px;
+    border: none;
+    border: 1.3px solid;
+    border-radius: 10px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .navbar {
+    &__list {
+      display: none;
+    }
+
+    &__burger {
+      display: flex;
+    }
+  }
+}
